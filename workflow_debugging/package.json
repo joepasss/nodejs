@@ -4,7 +4,8 @@
   "description": "for workflow and debugging in node study",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "start:dev": "nodemon --watch ./ ./app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/joepasss/nodejs/issues"
   },
-  "homepage": "https://github.com/joepasss/nodejs#readme"
+  "homepage": "https://github.com/joepasss/nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
