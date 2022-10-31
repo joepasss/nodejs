@@ -1,0 +1,19 @@
+{
+  "name": "workflow_debugging",
+  "version": "1.0.0",
+  "description": "for workflow and debugging in node study",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joepasss/nodejs.git"
+  },
+  "author": "joepasss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joepasss/nodejs/issues"
+  },
+  "homepage": "https://github.com/joepasss/nodejs#readme"
+}
