@@ -4,34 +4,12 @@ const express = require("express");
 
 const app = express();
 
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/add-product", (req, res, next) => {
-	res.send(
-		`
-		<h1>ADD PRODUCT PAGE</h1>
+app.use(adminRoutes);
+app.use(shopRoutes);
 
-		<form action='/product' method="POST">
-			<input type='text' name='title' />
-			<button type='submit'>add product</button>
-		</form>
-		`
-	);
-});
-
-app.post("/product", (req, res, next) => {
-	// app.get => it filters only get request
-	// app.post => it filters only post request
-
-	console.log(req.body);
-	res.redirect("/");
-});
-
-app.use("/", (req, res, next) => {
-	// has to be start with "/"
-	res.send("<h1>Hello from express!</h1>");
-});
-
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000);
