@@ -3,15 +3,17 @@ const express = require("express");
 
 const app = express();
 
-app.use((req, res, next) => {
-	console.log("in the middleware!");
-	next(); // Allows the request to continue to the next middleware
+app.use("/", (req, res, next) => {
+	console.log("This is always run!");
+	next();
 });
 
-app.use((req, res, next) => {
-	console.log("IN ANOTHER MIDDLEWARE!");
+app.use("/add-product", (req, res, next) => {
+	res.send("<h1>ADD PRODUCT ROUTE!</h1>");
+});
 
-	// html tag send!
+app.use("/", (req, res, next) => {
+	// has to be start with "/"
 	res.send("<h1>Hello from express!</h1>");
 });
 
