@@ -19,7 +19,10 @@ app.use("/add-product", (req, res, next) => {
 	);
 });
 
-app.use("/product", (req, res, next) => {
+app.post("/product", (req, res, next) => {
+	// app.get => it filters only get request
+	// app.post => it filters only post request
+
 	console.log(req.body);
 	res.redirect("/");
 });
