@@ -1,13 +1,22 @@
 {
 	"name": "express_useage",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "express js reference",
+	"main": "app.js",
 	"scripts": {
-		"start:dev": "nodemon --watch ./ ./app.js"
+		"start:dev": "nodemon --watch ./ app.js"
 	},
-	"author": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/joepasss/nodejs.git"
+	},
+	"keywords": ["nodejs", "expressjs"],
+	"author": "joepasss",
 	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/joepasss/nodejs/issues"
+	},
+	"homepage": "https://github.com/joepasss/nodejs#readme",
 	"devDependencies": {
 		"nodemon": "^2.0.20"
 	},

@@ -1,12 +1,5 @@
-// CORE MODULES
-// http, https, fs, path, os
-
-// http => Launch a server, send requests
-// https => Launch a SSL server
-
-// http module
 const http = require("http");
-const fs = require("fs");
+const requestHandler = require("./routes");
 
 const server = http.createServer((req, res) => {
   // console.log(req);
