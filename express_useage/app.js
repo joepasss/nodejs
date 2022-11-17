@@ -9,6 +9,7 @@ const shopRoutes = require("./routes/shop");
 const rootDir = require("./util/path");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/css", express.static(path.join(__dirname + "/views")));
 
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
